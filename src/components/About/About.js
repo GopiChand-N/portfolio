@@ -44,7 +44,9 @@ function About() {
           <strong className="purple">Tools</strong> I use
         </h1>
         <Toolstack />
-
+        <h1 className="project-heading" style={{ paddingBottom: "30px" }}>
+          My <strong className="purple">Achievements </strong>
+        </h1>
         <Github />
       </Container>
     </Container>

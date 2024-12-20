@@ -2,7 +2,7 @@ html {
   --section-background-color: linear-gradient(
     to bottom left,
     rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
+    rgba(21, 24, 8, 0.904)
   );
 
   --image-gradient: linear-gradient(
@@ -281,7 +281,12 @@ button:focus {
 }
 
 .main-name {
-  color: #cd5ff8;
+  background: linear-gradient(to right, #5146e3, #bb5680, #ff4e50);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+  /* line-height: 1; */
+  letter-spacing: 0.5px;
 }
 
 .Typewriter__wrapper {
@@ -740,4 +745,27 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+.tech-icons {
+  position: relative;
+}
+
+.tech-icons p {
+  font-size: 0.7rem;
+  position: absolute;
+  top: 0; /* Position text at the top of the box */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.7); /* Slightly transparent black background */
+  padding: 2px 8px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0; /* Hide text initially */
+  transition: opacity 0.3s ease; /* Smooth hover effect */
+}
+
+.tech-icons:hover p {
+  opacity: 1;
 }
