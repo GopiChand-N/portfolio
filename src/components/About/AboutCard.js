@@ -11,8 +11,9 @@ function AboutCard() {
             Hi Everyone, I am{" "}
             <span className="purple">Gopichand Narisetti </span>
             from <span className="purple"> Mangalagiri, India.</span>
-            <br />
-            I am currently employed as a software developer at Infojini.
+            <br />I am currently employed as a{" "}
+            <span className="purple">Sr.software developer </span> at Infojini
+            with <span className="purple">4 years </span> of IT experience.
             <br />
             I have completed my Bachelor of Technology at Vignan's University.
             <br />

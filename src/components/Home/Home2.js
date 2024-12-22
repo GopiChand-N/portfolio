@@ -5,6 +5,7 @@ import Tilt from "react-parallax-tilt";
 import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { IoCall } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
 
 function Home2() {
   return (
@@ -30,18 +31,34 @@ function Home2() {
               </i>
               <br />
               <br />
-              My interests revolve around developing scalable &nbsp;
+              My interests revolve around developing scalable{" "}
               <i>
-                <b className="purple">Web Applications </b> and crafting{" "}
+                <b className="purple">Web Applications,</b>{" "}
+              </i>
+              training{" "}
+              <i>
+                <b className="purple">Machine Learning Algorithms,</b>{" "}
+              </i>
+              building{" "}
+              <i>
+                <b className="purple">
+                  Microsoft Copilot Studio bots, Power Automate Flows,
+                </b>
+              </i>{" "}
+              creating{" "}
+              <i>
+                <b className="purple">PowerApps Connectors</b>{" "}
+              </i>
+              and crafting{" "}
+              <i>
                 <b className="purple">API solutions</b>
               </i>{" "}
               that streamline business processes.
               <br />
               <br />
               Whenever possible, I apply my knowledge of
-              <b className="purple"> AWS, </b>
               <i>
-                <b className="purple"> Azure DevOps,</b>
+                <b className="purple"> BitBucket, AWS, Azure Devops </b>
               </i>
               &nbsp;and
               <i>
@@ -107,6 +124,30 @@ function Home2() {
                   className="icon-colour home-social-icons"
                 >
                   <IoCall />
+                </a>
+              </li>
+
+              <li className="social-icons">
+                <a
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Fallback for unsupported browsers
+                    const tempInput = document.createElement("input");
+                    tempInput.value = "gopichand5201@gmail.com"; // Replace with your phone number
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand("copy"); // Use execCommand as a fallback
+                    document.body.removeChild(tempInput);
+                    alert("Email copied to clipboard!");
+                  }}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    cursor: "pointer",
+                  }}
+                  className="icon-colour home-social-icons"
+                >
+                  <MdEmail />
                 </a>
               </li>
             </ul>
