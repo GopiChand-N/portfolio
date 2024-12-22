@@ -2,12 +2,9 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { IoCall } from "react-icons/io5";
 
 function Home2() {
   return (
@@ -77,16 +74,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/gopichand-narisetti"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
+
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/gopichand-narisetti"
@@ -97,14 +85,28 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
+
               <li className="social-icons">
                 <a
-                  href="https://www.linkedin.com/in/gopichand-narisetti"
-                  target="_blank"
-                  rel="noreferrer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    // Fallback for unsupported browsers
+                    const tempInput = document.createElement("input");
+                    tempInput.value = "+917989788979"; // Replace with your phone number
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand("copy"); // Use execCommand as a fallback
+                    document.body.removeChild(tempInput);
+                    alert("Phone number copied to clipboard!");
+                  }}
+                  style={{
+                    textDecoration: "none",
+                    color: "inherit",
+                    cursor: "pointer",
+                  }}
                   className="icon-colour home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <IoCall />
                 </a>
               </li>
             </ul>
