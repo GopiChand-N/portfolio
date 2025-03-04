@@ -769,3 +769,29 @@ button:focus {
 .tech-icons:hover p {
   opacity: 1;
 }
+
+/* Add these styles */
+.certification-header a {
+  display: block;
+  width: 100%;
+  color: white !important;
+  text-decoration: none !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  padding: 5px 0;
+}
+
+.certification-header a:hover {
+  color: var(--imp-text-color) !important;
+  transform: translateX(8px);
+}
+
+.certification-header a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
